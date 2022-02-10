@@ -29,4 +29,4 @@ chroot $DESTDIR $qemu systemctl start NetworkManager.service
 chroot $DESTDIR $qemu systemctl enable NetworkManager.service
 
 umount $DESTDIR/proc
-umount $DESTDIR/dev
+umount -fl $DESTDIR/dev

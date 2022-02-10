@@ -72,7 +72,7 @@ fi
 make -C "$CADMIUMROOT/tmp/linux-$ARCH" INSTALL_MOD_PATH="$CADMIUMROOT/tmp/root" modules_install
 
 # we don't umount it in fs/build
-umount "$CADMIUMROOT/tmp/root"
+umount -rfl "$CADMIUMROOT/tmp/root"
 
 # yes, this fails when device is pendrive or sth
 losetup -d "$DEVICE" 2>/dev/null || true
